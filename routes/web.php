@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\BackOfficeController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\StoreController;
+use App\Http\Controllers\StoreSuccessController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,4 +18,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/BackOffice', [BackOfficeController::class, 'index'])->name('backOffice');
+Route::get('/back-office', [BackOfficeController::class, 'index'])->name('backOffice');
+Route::get('/store', [StoreController::class, 'index'])->name('store');
+route::post('/admin-store', [StoreController::class, 'store']);
